@@ -1,39 +1,26 @@
 {
-  "name": "reactnyt",
+  "name": "google-book-search",
   "version": "1.0.0",
-  "description": "",
+  "description": "React based app looking at the Google Books API and returning information on authors, titles, and subjects.",
   "main": "server.js",
+  "dependencies": {
+    "express": "^4.16.4",
+    "mongodb": "^3.2.3",
+    "mongoose": "^5.5.5"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "dev": "webpack -w & node server.js"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hknowlton/react-NYT.git"
+    "url": "git+https://github.com/jonatr0n/Google-Book-Search.git"
   },
-  "author": "Heather Knowlton",
+  "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/hknowlton/react-NYT/issues"
+    "url": "https://github.com/jonatr0n/Google-Book-Search/issues"
   },
-  "homepage": "https://github.com/hknowlton/react-NYT#readme",
-  "dependencies": {
-    "axios": "^0.16.2",
-    "body-parser": "^1.17.2",
-    "express": "^4.15.3",
-    "mongoose": "^4.10.5",
-    "morgan": "^1.8.2",
-    "react": "^15.5.4",
-    "react-dom": "^15.5.4",
-    "react-router": "^2.4.1"
-  },
-  "devDependencies": {
-    "babel-core": "^6.3.13",
-    "babel-loader": "^6.2.0",
-    "babel-preset-es2015": "^6.3.13",
-    "babel-preset-react": "^6.3.13",
-    "json-loader": "^0.5.4",
-    "webpack": "^2.6.1"
-  }
+  "homepage": "https://github.com/jonatr0n/Google-Book-Search#readme"
 }
