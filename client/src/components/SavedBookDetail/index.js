@@ -3,7 +3,7 @@ import React from "react";
 const SavedBookDetail = props => {
   return (
     <span>
-      <div className="col-md-4" style={{ float: "left", marginTop: "20px" }}>
+      <div className="col-md-2" style={{ float: "left", marginTop: "10px" }}>
         <p><img alt={props.title} className="img-fluid" src={props.src} style={{ margin: "0 auto" }} /></p>
         <p style={{ fontSize: "30px" }}>{props.title}</p>
         <p><strong>Author(s):</strong> {props.authors}</p>
@@ -13,7 +13,7 @@ const SavedBookDetail = props => {
           Delete
         </button>
       </div>
-      <div className="col-md-8" style={{ float: "right", marginTop: "20px" }}>
+      <div className="col-md-10" style={{ float: "right", marginTop: "20px" }}>
         <p style={{ marginBottom: "30px"}}><strong>Summary:</strong> {props.description}</p>
       </div>
       <hr style={{ clear: "both" }} />

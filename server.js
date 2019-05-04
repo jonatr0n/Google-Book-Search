@@ -5,10 +5,10 @@ const app = express();
 const routes = require("./routes");
 const mongoose = require("mongoose");
 
-// Express middleware
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-// Serve up static assets (usually on heroku)
+
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
@@ -16,7 +16,6 @@ if (process.env.NODE_ENV === "production") {
 // adding routes
 app.use(routes);
 
-// request to the React app
 // define any API routes
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));

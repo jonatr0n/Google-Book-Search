@@ -14,11 +14,12 @@ class SavedBooks extends Component {
   // grab the books from /api/books
   componentDidMount() {
     API.getBooks()
-      .then(res => this.setState(
-        { 
-          books: res.data 
-        },
-        console.log(res.data)
+      .then(res =>
+        this.setState(
+          {
+            books: res.data
+          },
+          console.log(res.data)
         )
       )
       .catch(err => console.log(err));
@@ -27,9 +28,7 @@ class SavedBooks extends Component {
   // loads all books
   loadBooks = () => {
     API.getBooks()
-      .then(res =>
-        this.setState({ books: res.data })
-      )
+      .then(res => this.setState({ books: res.data }))
       .catch(err => console.log(err));
   };
 
@@ -38,7 +37,7 @@ class SavedBooks extends Component {
     API.deleteBook(id)
       .then(res => this.loadBooks())
       .catch(err => console.log(err));
-  }
+  };
 
   render() {
     return (
@@ -50,9 +49,11 @@ class SavedBooks extends Component {
                 {this.state.books.map(book => (
                   <SavedBookDetail
                     key={book._id}
-                    src={book 
-                      ? book.src 
-                      : "http://icons.iconarchive.com/icons/paomedia/small-n-flat/128/book-icon.png"}
+                    src={
+                      book
+                        ? book.src
+                        : "http://icons.iconarchive.com/icons/paomedia/small-n-flat/128/book-icon.png"
+                    }
                     title={book.title}
                     authors={book.authors.join(", ")}
                     date={book.date}
@@ -63,7 +64,7 @@ class SavedBooks extends Component {
                 ))}
               </Card>
             ) : (
-              <Card heading="Saved Books"></Card>
+              <Card heading="Saved Books" />
             )}
           </Col>
         </Row>

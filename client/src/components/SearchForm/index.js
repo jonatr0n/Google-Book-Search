@@ -10,7 +10,7 @@ const SearchForm = props => {
           name="search"
           type="text"
           className="form-control"
-          placeholder="Search for a Book, Author, or Topic"
+          placeholder="Search for a Book"
           id="search"
         />
         <br />
